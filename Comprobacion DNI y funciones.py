@@ -35,12 +35,15 @@ def diferencia_simetrica(lista):
         print(f"Las diferencias entre el primero conjunto y el resto son {diferencia_simetrica}")
 
 def suma_dni(lista):
-    suma=[]
+    
     #itero en la lista obteniendo cada set, sumo al mismo y agrego el valor de la suma en una lista vacia
     for i in lista:
-        suma_set=sum(i)
-        suma.append(suma_set)
-        print(f"La suma de los números  {i} es {suma_set}")
+        for r in i:
+            suma=0
+            for j in r:
+                integro=int(j)     
+                suma+=integro 
+            print(f"La suma de los números  {r} es {suma}")
     return suma
 
 
@@ -110,7 +113,7 @@ else:
     print("Ingrese 1 para realizar la union entre los conjuntos \n 2 para la diferencia \n 3 para la interseccion \n 4 para la diferencia_simetrica \n 5 para la suma de los DNI \n y 6 para contar la canitdad de digitos en cada DNI: \n")
     while opcion !="0":
         opcion=input("")
-        if opcion not in opciones_validas or int(opcion)>6:
+        if not opcion or opcion not in opciones_validas or int(opcion)>6:
             print("Elija una opcion valida")
         else:
             decisiones.append(opcion)
@@ -131,7 +134,7 @@ else:
         elif i=="4":
             diferencia_simetrica(lista_unicos)
         elif i=="5":
-            suma_dni(lista_unicos)
+            suma_dni(lista_documentos)
         elif i=="6":
             cantidad_digitos(lista_documentos)
     
