@@ -36,7 +36,7 @@ def diferencia_simetrica(lista):
 
 def suma_dni(lista):
     
-    #itero en la lista obteniendo cada set, sumo al mismo y agrego el valor de la suma en una lista vacia
+    #itero en la lista hasta llegar al digito, luego lo convierto a integro y lo agrego a la variable "suma" que esta va sumando sus valores.
     for i in lista:
         for r in i:
             suma=0
@@ -128,9 +128,9 @@ else:
             if len(interseccion(lista_unicos))==0:
                 print("No se encontraron digitos compartidos")
             elif len(interseccion(lista_unicos))==1:
-                 print(f"El digito compartido con todos los conjuntos es {interseccion(lista_unicos)}")
+                print(f"El digito compartido con todos los conjuntos es {interseccion(lista_unicos)}")
             else:        
-                 print(f"Los digitos compartidos con todos los conjuntos son {interseccion(lista_unicos)}")
+                print(f"Los digitos compartidos con todos los conjuntos son {interseccion(lista_unicos)}")
         elif i=="4":
             diferencia_simetrica(lista_unicos)
         elif i=="5":
